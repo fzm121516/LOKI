@@ -15,5 +15,7 @@ from lm_evaluate.models.idefics import Idefics
 from lm_evaluate.models.qwen_vl_api import QwenVLAPI
 from lm_evaluate.models.mistral_api import MistralAPI
 from lm_evaluate.models.qwen_vl import Qwen2VL
+from lm_evaluate.models.qwen2_5_vl import Qwen25VL
+from lm_evaluate.models.qwen_omni import Qwen25omniVL
 from lm_evaluate.models.pointllm import PointLLM
 from lm_evaluate.models.llama_3v import Llama3Vision
