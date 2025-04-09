@@ -1,5 +1,7 @@
 
 
+python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1
+
 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
 
 
@@ -54,7 +56,6 @@ Aggregating Results: 100%|______________________________________________________
 
 
 
-python run.py --model_config_path configs/models/qwen2.5_vl_sft2800_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
 
 
 python run.py --model_config_path configs/models/qwen2.5_vl_sft_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
@@ -108,3 +109,4 @@ Aggregating Results: 100%|______________________________________________________
 |runway                                               | 146|0.6556250000000000|
 
 
+python run.py --model_config_path configs/models/qwen2.5_vl_sft4000_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
