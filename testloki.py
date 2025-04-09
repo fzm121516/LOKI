@@ -101,7 +101,7 @@ def calculate_accuracy_by_model(json_file):
     return final_metrics
 
 # 使用示例
-json_file = '/data/LOKI/logs/qwen2_5_vl_loki/0409_0051/qwen2_5_vl_lora_sft_1200_loki-video-tf_result.json'
+json_file = 'qwen2_5_vl_lora_sft_5618_loki-video-tf_result.json'
 accuracy_results = calculate_accuracy_by_model(json_file)
 print(json.dumps(accuracy_results, indent=4, sort_keys=True))
 

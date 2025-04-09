@@ -1,7 +1,7 @@
 model_type: qwen2_5_vl
 
 init_kwargs:
-  model_version: /data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_2000
+  model_version: /data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_2800
 
 generate_kwargs:
   top_p: 1
