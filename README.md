@@ -110,3 +110,6 @@ Aggregating Results: 100%|______________________________________________________
 
 
 python run.py --model_config_path configs/models/qwen2.5_vl_sft4000_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+
+python run.py --model_config_path configs/models/qwen2.5_vl_sft1347_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1

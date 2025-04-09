@@ -368,7 +368,7 @@ class Qwen25VL(LMM):
         eval_logger.debug(f"Prompt: {prompt}")
         
         generation_args = { 
-            "max_new_tokens": 1000, 
+            "max_new_tokens": 2, 
             "temperature": 0.0, 
             "do_sample": False, 
         } 
@@ -398,6 +398,7 @@ class Qwen25VL(LMM):
         
         eval_logger.debug(response)
         
+        print(response)  # 直接打印到控制台
         return response
     
         
