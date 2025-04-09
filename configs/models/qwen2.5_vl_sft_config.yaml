@@ -1,10 +1,10 @@
 model_type: qwen2_5_vl
 
 init_kwargs:
-  model_version: /data/LLaMA-Factory/output/qwen2_5_vl_lora_sft
+  model_version: /data/LLaMA-Factory/output/qwen2_5_vl_lora_sft_5618
 
 generate_kwargs:
   top_p: 1
   top_k: None
   temperature: 0
-  max_new_tokens: 1024
+  max_new_tokens: 64

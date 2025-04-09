@@ -160,3 +160,9 @@ Aggregating Results: 100%|______________________________________________________
 |open-sora                                            | 156|0.5422641509433963|
 |Photorealistic Video Generation with Diffusion Models| 264|0.6342133476279819|
 |runway                                               | 146|0.6320833333333333|
+
+
+
+
+
+
