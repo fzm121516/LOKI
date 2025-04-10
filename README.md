@@ -2,6 +2,60 @@
 
 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1
 
+python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml   --task_config_path configs/tasks/video/video_mc_loki.yaml --batch_size 1
+
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 18
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 18
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.5555555555555556
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.5555555555555556
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: keling
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 33
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 33
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.36363636363636365
+2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.5454545454545454
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: Lumiere
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 34
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 34
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.6176470588235294
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.5882352941176471
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: Sora
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 38
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 38
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.5789473684210527
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.6578947368421053
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: open-sora
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 25
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 25
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.6
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.68
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: Photorealistic Video Generation with Diffusion Models
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 41
+2025-04-10 13:20:19.554 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 41
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.6829268292682927
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.5609756097560976
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: runway
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 25
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 25
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.72
+2025-04-10 13:20:19.555 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.72
+Aggregating Results: 100%|_____________________________________________________________________________________________________________________________________________________________________| 428/428 [00:00<00:00, 152701.78it/s]
+2025-04-10 13:20:19.613 | INFO     | lm_evaluate.tasks.loki:print_pretty_accuracy:669 - 
+|                        Type                         |Num|     Accuracy      |
+|-----------------------------------------------------|--:|------------------:|
+|total_accuracy                                       |428|0.60046728971962620|
+|CogVideoX                                            | 36|0.55555555555555560|
+|keling                                               | 66|0.45454545454545453|
+|Lumiere                                              | 68|0.60294117647058830|
+|Sora                                                 | 76|0.61842105263157900|
+|open-sora                                            | 50|0.64000000000000000|
+|Photorealistic Video Generation with Diffusion Models| 82|0.62195121951219520|
+|runway                                               | 50|0.72000000000000000|
+
+Model Responding: 100%|____________________________________________________________________________________________________________________________________________________________________________| 428/428 [09:29<00:00,  1.33s/it]
+(loki) root@jwelueqgpocydvpx-wind-7db595f75c-6slhn:/data/LOKI# 
+
+
+python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml  --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
 
 025-04-09 01:05:25.917 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: CogVideoX                                                                                                          | 0/1272 [00:00<?, ?it/s]
 2025-04-09 01:05:25.918 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 36
@@ -108,3 +162,57 @@ Aggregating Results: 100%|______________________________________________________
 |runway                                               | 146|0.6985416666666666|
 
 
+python run.py --model_config_path configs/models/qwen2.5_vl_sft2245_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+python run.py --model_config_path configs/models/qwen2.5_vl_sft2245_config.yaml --task_config_path configs/tasks/video/video_mc_loki.yaml --batch_size 1
+
+025-04-10 12:53:22.207 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: CogVideoX                                                                                                          | 0/1272 [00:00<?, ?it/s]
+2025-04-10 12:53:22.207 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 36
+2025-04-10 12:53:22.207 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 52
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.6666666666666666
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.8269230769230769
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: keling
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 66
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 176
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.6515151515151515
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.6136363636363636
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: Lumiere
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 68
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 68
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.7205882352941176
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.75
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: Sora
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 76
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 164
+2025-04-10 12:53:22.208 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.5789473684210527
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.5975609756097561
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: open-sora
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 50
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 106
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.84
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.4528301886792453
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: Photorealistic Video Generation with Diffusion Models
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 82
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 182
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.4634146341463415
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.9010989010989011
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: runway
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 50
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:628 - Fake Num: 96
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:630 - Real Acc: 0.66
+2025-04-10 12:53:22.209 | INFO     | lm_evaluate.tasks.loki:aggregate_results:631 - Fake Acc: 0.6770833333333334
+Aggregating Results: 100%|___________________________________________________________________________________________________________________________________________________________________| 1272/1272 [00:00<00:00, 321685.54it/s]
+2025-04-10 12:53:22.283 | INFO     | lm_evaluate.tasks.loki:print_pretty_accuracy:669 - 
+|                        Type                         |Num |     Accuracy     |
+|-----------------------------------------------------|---:|-----------------:|
+|total_accuracy                                       |1272|0.6558188182280925|
+|CogVideoX                                            |  88|0.7467948717948718|
+|keling                                               | 242|0.6325757575757576|
+|Lumiere                                              | 136|0.7352941176470589|
+|Sora                                                 | 240|0.5882541720154044|
+|open-sora                                            | 156|0.6464150943396226|
+|Photorealistic Video Generation with Diffusion Models| 264|0.6822567676226213|
+|runway                                               | 146|0.6685416666666667|
+
+Model Responding: 100%|__________________________________________________________________________________________________________________________________________________________________________| 1272/1272 [11:05<00:00,  1.91it/s]
+(loki) root@jwelueqgpocydvpx-wind-7db595f75c-6slhn:/data/LOKI# 

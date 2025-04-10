@@ -360,7 +360,8 @@ class Qwen25VL(LMM):
         prompt = self.processor.apply_chat_template(
             messages,
             tokenize=False,
-            add_generation_prompt=True
+            add_generation_prompt=True,
+            add_vision_id=True
         )
         
         image_inputs, video_inputs = process_vision_info(messages)
