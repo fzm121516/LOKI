@@ -443,3 +443,13 @@ Aggregating Results: 100%|______________________________________________________
 
 Model Responding: 100%|____________________________________________________________________________________________________________________________________________________________________________| 428/428 [10:46<00:00,  1.51s/it]
 (loki) root@jwelueqgpocydvpx-wind-7db595f75c-6slhn:/data/LOKI# 
+
+
+
+
+python run.py --model_config_path configs/models/qwen2_vl_sft2245_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+python run.py --model_config_path configs/models/qwen2_vl_sft1500_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+
+
