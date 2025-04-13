@@ -125,3 +125,17 @@ Accuracy: 72.5
 F1 Score: 64.3
 Yes rate: 26.8
 (torch) root@myrwyxgjhppiblne-wind-7c45878684-sqlbb:/data/Impossible-Videos# 
+
+
+
+qwen2vl-ipv
+
+Total number of questions:  1307
+Accuracy is 76.2
+Accuracy on fake videos: 58.4
+Accuracy on real videos: 94.2
+----------------------------------------------------------------------------------------------------
+Accuracy: 76.2
+F1 Score: 71.2
+Yes rate: 32.3
+(loki) root@2ac0fc1f0849:~/zgp2/fanzheming/Impossible-Videos# 
