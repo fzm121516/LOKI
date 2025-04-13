@@ -1,7 +1,7 @@
 model_type: qwen2_5_vl
 
 init_kwargs:
-  model_version: /data/Qwen2.5-VL-7B-Instruct
+  model_version: /root/zgp2/fanzheming/Qwen2.5-VL-7B-Instruct
 
 generate_kwargs:
   top_p: 1
