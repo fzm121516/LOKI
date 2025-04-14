@@ -173,3 +173,11 @@ Example: But the water level doesn't rise—it drops instead.
 Describe a follow-up event, character reaction, or final outcome to give the scene more completeness.
 Example: Eventually, the water in the glass vanishes.
 """
+
+
+
+
+
+
+
+CUDA_VISIBLE_DEVICES=0 python run.py --model_config_path configs/models/qwen2_vl_sft1000_config.yaml  --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
