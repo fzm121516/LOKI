@@ -127,6 +127,7 @@ Yes rate: 26.8
 (torch) root@myrwyxgjhppiblne-wind-7c45878684-sqlbb:/data/Impossible-Videos# 
 
 
+CUDA_VISIBLE_DEVICES=1 python evalqwen2vl.py
 
 qwen2vl-ipv
 
@@ -139,3 +140,27 @@ Accuracy: 76.2
 F1 Score: 71.2
 Yes rate: 32.3
 (loki) root@2ac0fc1f0849:~/zgp2/fanzheming/Impossible-Videos# 
+
+CUDA_VISIBLE_DEVICES=1 python evalqwen2.5vl.py
+
+
+
+rule_template = """
+Generate a short text of around 50 characters to describe a scene for a video containing a logical contradiction.
+
+1. Setting
+Define a common or realistic scenario grounded in the real world. The environment should include familiar, sensible details.
+Example: There is a glass of water on the table.
+
+2. Logical Introduction
+Introduce an action, event, or state change that aligns with common sense and follows a cause-effect relationship.
+Example: A person pours water into the glass.
+
+3. Contradiction
+Immediately introduce a conflicting or illogical element that contradicts the previous statement, creating a logical inconsistency to grab attention.
+Example: But the water level doesn't rise—it drops instead.
+
+4. (Optional) Result or Reaction
+Describe a follow-up event, character reaction, or final outcome to give the scene more completeness.
+Example: Eventually, the water in the glass vanishes.
+"""
