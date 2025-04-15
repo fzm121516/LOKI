@@ -1,0 +1,10 @@
+model_type: qwen2-vl
+
+init_kwargs:
+  model_version: /root/zgp2/fanzheming/LLaMA-Factory/output/qwen2_vl_lora_sft_900_new
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 16
