@@ -621,3 +621,9 @@ Aggregating Results: 100%|______________________________________________________
 |open-sora                                            | 156|0.7100000000000000|
 |Photorealistic Video Generation with Diffusion Models| 264|0.6585365853658537|
 |runway                                               | 146|0.7447916666666667|
+
+
+
+
+
+python run.py --model_config_path configs/models/qwen2_vl_config_200.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
