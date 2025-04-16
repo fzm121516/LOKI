@@ -1,7 +1,7 @@
 model_type: qwen2-vl
 
 init_kwargs:
-  model_version: /root/zgp2/fanzheming/LLaMA-Factory/output/qwen2_vl_sft_lora_0416
+  model_version: /root/zgp2/fanzheming/LLaMA-Factory/output/qwen2_vl_sft_lora_vitandmerger_900
 
 generate_kwargs:
   top_p: 1

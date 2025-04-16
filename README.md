@@ -624,6 +624,9 @@ Aggregating Results: 100%|______________________________________________________
 
 
 
-python3 run.py --model_config_path configs/models/qwen2_vl_config_0416.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+CUDA_VISIBLE_DEVICES=2 python3 run.py --model_config_path configs/models/qwen2_vl_onlymerger900_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
 
-python3 run.py --model_config_path configs/models/qwen2_vl_config_0416.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+
+
+CUDA_VISIBLE_DEVICES=2 python3 run.py --model_config_path configs/models/qwen2_vl_vitandmerger_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
