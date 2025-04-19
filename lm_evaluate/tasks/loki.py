@@ -632,7 +632,7 @@ class Loki(Task):
                     total_fake_num += fake_num
                     
                     # Calculate weighted accuracies
-                    total_real_accuracy += real_num * real_accuracy
+                    total_real_accuracy += fake_num * real_accuracy
                     total_fake_accuracy += fake_num * fake_accuracy
                     
                     per_metric_accuracy[fake_key] = {
@@ -647,7 +647,7 @@ class Loki(Task):
                     total_accuracy += fake_num * (fake_accuracy + real_accuracy) / 2
                     
                 # Calculate weighted averages
-                total_real_accuracy = total_real_accuracy / total_real_num if total_real_num > 0 else 0
+                total_real_accuracy = total_real_accuracy / total_fake_num
                 total_fake_accuracy = total_fake_accuracy / total_fake_num
                 total_accuracy /= total_fake_num
                 total_num = total_real_num + total_fake_num
