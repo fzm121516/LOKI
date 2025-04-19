@@ -603,12 +603,12 @@ class Loki(Task):
                 total_fake_num = 0
                 
                 total_accuracy = 0
+                total_real_accuracy = 0
+                total_fake_accuracy = 0
                 
                 for fake_key, fake_value in fake_type_accuracy.items():
                     
                     eval_logger.info(f"Type: {fake_key}")
-                    
-                    
                     
                     fake_accuracy = sum(fake_value) / len(fake_value)
                     fake_num = len(fake_value)
@@ -617,10 +617,8 @@ class Loki(Task):
                         eval_logger.info(f"Type: {fake_key} has no real data")
                         real_num = 0
                         real_accuracy = fake_accuracy
-                    
                     else:
                         real_value = real_type_accuracy[fake_key]
-
                         real_accuracy = sum(real_value) / len(real_value) 
                         real_num = len(real_value)
                     
@@ -633,14 +631,35 @@ class Loki(Task):
                     total_real_num += real_num
                     total_fake_num += fake_num
                     
-                    per_metric_accuracy[fake_key] = {'accuracy': (fake_accuracy + real_accuracy) / 2, f'num': fake_num + real_num}
+                    # Calculate weighted accuracies
+                    total_real_accuracy += real_num * real_accuracy
+                    total_fake_accuracy += fake_num * fake_accuracy
+                    
+                    per_metric_accuracy[fake_key] = {
+                        'accuracy': (fake_accuracy + real_accuracy) / 2, 
+                        'num': fake_num + real_num,
+                        'real_accuracy': real_accuracy,
+                        'fake_accuracy': fake_accuracy,
+                        'real_num': real_num,
+                        'fake_num': fake_num
+                    }
                     
                     total_accuracy += fake_num * (fake_accuracy + real_accuracy) / 2
                     
+                # Calculate weighted averages
+                total_real_accuracy = total_real_accuracy / total_real_num if total_real_num > 0 else 0
+                total_fake_accuracy = total_fake_accuracy / total_fake_num
                 total_accuracy /= total_fake_num
                 total_num = total_real_num + total_fake_num
                 
-            total_accuracy_dict = {"accuracy": total_accuracy, "num": total_num}
+            total_accuracy_dict = {
+                "accuracy": total_accuracy, 
+                "num": total_num,
+                "real_accuracy": total_real_accuracy,
+                "fake_accuracy": total_fake_accuracy,
+                "real_num": total_real_num,
+                "fake_num": total_fake_num
+            }
         
         else:
             total_accuracy_dict = {"accuracy": sum(accuracy) / len(accuracy), "num": len(accuracy)}
