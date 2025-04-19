@@ -129,7 +129,7 @@ class Qwen2VL(LMM):
     @property
     def device(self):
         return self._device
-    
+
     def batch_generate(
         self,
         batched_visuals,
@@ -262,7 +262,7 @@ class Qwen2VL(LMM):
         eval_logger.debug(response)
         
         return response
-    
+
     def generate(
         self, 
         visuals: Union[Image.Image, str, List[Union[Image.Image, str]]],
