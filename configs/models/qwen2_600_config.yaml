@@ -1,0 +1,10 @@
+model_type: qwen2-vl
+
+init_kwargs:
+  model_version: /root/zgp2/fanzheming/LLaMA-Factory/saves/Qwen2-VL-7B-Instruct/lora/train_qwen2DVF2_2025-04-17-18-27-79/checkpoint-600
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 16
