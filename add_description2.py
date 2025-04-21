@@ -1,6 +1,6 @@
 import json
 
-with open('true_or_false_with_description_qwen2.json', 'r', encoding='utf-8') as f:
+with open('true_or_false_with_description_internvl25.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 for item in data:
@@ -23,8 +23,8 @@ for item in data:
         
         del item['description']
 
-with open('true_or_false_with_description_qwen2_test.json', 'w', encoding='utf-8') as f:
+with open('true_or_false_with_description_internvl25_test.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
-print("处理完成，结果已保存到 true_or_false_modified.json")
+print("处理完成")
 
