@@ -18,6 +18,9 @@ torch.backends.cudnn.benchmark = False
 
 
 
+
+path = '/root/zgp2/fanzheming/LVLM/InternVL2_5-8B'
+
 import numpy as np
 import torch
 import torchvision.transforms as T
@@ -100,8 +103,9 @@ def load_image(image_file, input_size=448, max_num=12):
     pixel_values = torch.stack(pixel_values)
     return pixel_values
 
-# If you want to load a model using multiple GPUs, please refer to the `Multiple GPUs` section.
-path = '/root/zgp2/fanzheming/LVLM/InternVL2_5-8B'
+# If you have an 80G A100 GPU, you can put the entire model on a single GPU.
+# Otherwise, you need to load a model using multiple GPUs, please refer to the `Multiple GPUs` section.
+
 model = AutoModel.from_pretrained(
     path,
     torch_dtype=torch.bfloat16,
@@ -110,8 +114,6 @@ model = AutoModel.from_pretrained(
     trust_remote_code=True).eval().cuda()
 tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True, use_fast=False)
 
-
-generation_config = dict(max_new_tokens=1024, do_sample=False)
 
 
 # video multi-round conversation (视频多轮对话)
@@ -153,19 +155,16 @@ def load_video(video_path, bound=None, input_size=448, max_num=1, num_segments=3
 
 @torch.inference_mode()
 def generate_description(video_path):
-
+    generation_config = dict(max_new_tokens=1024, do_sample=False)
     pixel_values, num_patches_list = load_video(video_path, num_segments=8, max_num=1)
     pixel_values = pixel_values.to(torch.bfloat16).cuda()
     video_prefix = ''.join([f'Frame{i+1}: <image>\n' for i in range(len(num_patches_list))])
-
-    question = 'You are shown a video. Please describe the content of this video in detail.'
-
+    question = video_prefix + 'You are shown a video. Please describe the content of this video in detail.'
     # Frame1: <image>\nFrame2: <image>\n...\nFrame8: <image>\n{question}
     response, history = model.chat(tokenizer, pixel_values, question, generation_config,
                                 num_patches_list=num_patches_list, history=None, return_history=True)
+    print(f'Assistant: {response}')
 
-
-    print(f'User: {question}\nAssistant: {response}')
     return response
 
 def process_videos(json_path):
