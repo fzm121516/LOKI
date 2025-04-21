@@ -22,8 +22,8 @@ def merge_descriptions(main_json, desc_json):
 if __name__ == "__main__":
     # 输入文件路径
     main_json_path = "true_or_false.json"  # 第一个JSON文件路径
-    desc_json_path = "one_path.json"  # 第二个JSON文件路径
-    output_json_path = "true_or_false_with_description.json"  # 输出文件路径
+    desc_json_path = "one_path_qwen2.json"  # 第二个JSON文件路径
+    output_json_path = "true_or_false_with_description_qwen2.json"  # 输出文件路径
     
     # 加载JSON文件
     main_json = load_json(main_json_path)
