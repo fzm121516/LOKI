@@ -101,7 +101,7 @@ def load_image(image_file, input_size=448, max_num=12):
     return pixel_values
 
 # If you want to load a model using multiple GPUs, please refer to the `Multiple GPUs` section.
-path = 'OpenGVLab/InternVL2_5-8B'
+path = '/root/zgp2/fanzheming/LVLM/InternVL2_5-8B'
 model = AutoModel.from_pretrained(
     path,
     torch_dtype=torch.bfloat16,
