@@ -1,66 +1,66 @@
 {
     "total_accuracy": {
-        "accuracy": 0.5618544859432131,
+        "accuracy": 0.5627640248465343,
         "num": 1272,
-        "real_accuracy": 0.9673108676210234,
-        "fake_accuracy": 0.15639810426540285,
+        "real_accuracy": 0.9750541160437796,
+        "fake_accuracy": 0.1504739336492891,
         "real_num": 428,
         "fake_num": 844
     },
     "per_metric_accuracy": {
         "CogVideoX": {
-            "accuracy": 0.5576923076923077,
+            "accuracy": 0.5673076923076923,
             "num": 88,
             "real_accuracy": 1.0,
-            "fake_accuracy": 0.11538461538461539,
+            "fake_accuracy": 0.1346153846153846,
             "real_num": 36,
             "fake_num": 52
         },
         "keling": {
-            "accuracy": 0.5596590909090909,
+            "accuracy": 0.5454545454545454,
             "num": 242,
             "real_accuracy": 1.0,
-            "fake_accuracy": 0.11931818181818182,
+            "fake_accuracy": 0.09090909090909091,
             "real_num": 66,
             "fake_num": 176
         },
         "Lumiere": {
-            "accuracy": 0.5441176470588235,
+            "accuracy": 0.5514705882352942,
             "num": 136,
             "real_accuracy": 0.9705882352941176,
-            "fake_accuracy": 0.11764705882352941,
+            "fake_accuracy": 0.1323529411764706,
             "real_num": 68,
             "fake_num": 68
         },
         "Sora": {
-            "accuracy": 0.568196405648267,
+            "accuracy": 0.5722079589216945,
             "num": 240,
-            "real_accuracy": 0.9473684210526315,
-            "fake_accuracy": 0.18902439024390244,
+            "real_accuracy": 0.9736842105263158,
+            "fake_accuracy": 0.17073170731707318,
             "real_num": 76,
             "fake_num": 164
         },
         "open-sora": {
-            "accuracy": 0.5177358490566037,
+            "accuracy": 0.5130188679245283,
             "num": 156,
             "real_accuracy": 0.96,
-            "fake_accuracy": 0.07547169811320754,
+            "fake_accuracy": 0.0660377358490566,
             "real_num": 50,
             "fake_num": 106
         },
         "Photorealistic Video Generation with Diffusion Models": {
-            "accuracy": 0.5800053604931653,
+            "accuracy": 0.5943446797105334,
             "num": 264,
-            "real_accuracy": 0.9512195121951219,
-            "fake_accuracy": 0.2087912087912088,
+            "real_accuracy": 0.9634146341463414,
+            "fake_accuracy": 0.22527472527472528,
             "real_num": 82,
             "fake_num": 182
         },
         "runway": {
-            "accuracy": 0.5841666666666666,
+            "accuracy": 0.5789583333333334,
             "num": 146,
             "real_accuracy": 0.96,
-            "fake_accuracy": 0.20833333333333334,
+            "fake_accuracy": 0.19791666666666666,
             "real_num": 50,
             "fake_num": 96
         }
@@ -80,7 +80,7 @@
     "task_config": {
         "task_type": "loki",
         "init_kwargs": {
-            "dataset_path": "data_json/video/true_or_false_VDP_qwen2vl.json",
+            "dataset_path": "true_or_false_with_description_qwen2.json",
             "task_name": "loki-video-tf",
             "task_modality": "video"
         }
