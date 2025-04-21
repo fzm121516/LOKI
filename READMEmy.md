@@ -13,6 +13,7 @@ python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml --task_c
 
 
 
+
 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml   --task_config_path configs/tasks/video/video_mc_loki.yaml --batch_size 1
 
 2025-04-10 13:20:19.553 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 18
