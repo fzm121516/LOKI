@@ -8,6 +8,7 @@ CUDA_VISIBLE_DEVICES=0 python description_Qwen2.5-VL-7B-Instruct.py
 
 
 
+
 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1
 
 
