@@ -30,7 +30,7 @@ processor = AutoProcessor.from_pretrained("/root/zgp2/fanzheming/LLaMA-Factory/s
 max_pixels = 360 * 420
 fps = 1.0
 prompt_part0 = "You are shown a video."
-prompt_part1 = "Please describe the content of this video in detail."
+prompt_part1 = "Please describe the content of this video in detail, without evaluating its authenticity."
 
 @torch.inference_mode()
 def generate_description(video_path):
