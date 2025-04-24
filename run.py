@@ -29,6 +29,7 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
     TODO: Aggregate batch_generate and generate
     TODO: Split LOKI into subtasks
 """
+import numpy as np
 import torch
 import random
 seed = 42
