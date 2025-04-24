@@ -21,7 +21,7 @@ for item in data:
         
 
 
-with open('true_or_false_without_description.json', 'w', encoding='utf-8') as f:
+with open('true_or_false_ssp.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
 print("处理完成")
