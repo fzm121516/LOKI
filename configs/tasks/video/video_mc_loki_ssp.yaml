@@ -4,3 +4,4 @@ init_kwargs:
   dataset_path: multi_choice_ssp.json
   task_name: loki-video-mc
   task_modality: video
+
