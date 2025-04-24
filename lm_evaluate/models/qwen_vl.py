@@ -32,13 +32,7 @@ from PIL import Image
 
 if version.parse(transformers.__version__) < version.parse("4.43.0"):
     eval_logger.debug("Please upgrade transformers to use Phi-3.5-Vision")
-import random
-seed = 42
-torch.manual_seed(seed)
-np.random.seed(seed)
-random.seed(seed)
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
+
 @register_model("qwen2-vl")
 class Qwen2VL(LMM):
     supported_modalities = ["video", "image", "text"]
