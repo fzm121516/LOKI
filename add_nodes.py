@@ -20,6 +20,7 @@ for item in data:
             item['question'] = new_question
         
 
+
 with open('true_or_false_without_description.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
