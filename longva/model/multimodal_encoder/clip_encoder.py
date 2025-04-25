@@ -174,3 +174,5 @@ class CLIPVisionTowerS2(CLIPVisionTower):
     @property
     def hidden_size(self):
         return self.config.hidden_size * len(self.s2_scales)
+
+
