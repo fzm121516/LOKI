@@ -1,7 +1,7 @@
 model_type: longva
 
 init_kwargs:
-  model_version: lmms-lab/LongVA-7B
+  model_version: /root/zgp2/fanzheming/LVLM/LongVA-7B
   model_name: llava_qwen
   max_num_frames: 32
 
