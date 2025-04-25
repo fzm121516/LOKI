@@ -192,5 +192,5 @@ def process_videos(json_path):
     print(f"Descriptions saved to {json_path}")
 
 if __name__ == "__main__":
-    json_path = "one_path_internvl25.json"
+    json_path = "one_path_internvl3.json"
     process_videos(json_path)
