@@ -20,7 +20,7 @@ torch.backends.cudnn.benchmark = False
 
 
 
-path = '/root/zgp2/fanzheming/LVLM/InternVL2_5-8B'
+path = '/root/zgp2/fanzheming/LVLM/InternVL3-8B'
 
 import numpy as np
 import torch

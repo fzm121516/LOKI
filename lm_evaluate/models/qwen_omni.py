@@ -24,12 +24,10 @@ from accelerate.state import AcceleratorState
 from loguru import logger as eval_logger
 try:
     from transformers import AutoModelForCausalLM, AutoProcessor
-    from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
+    from transformers import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor,AutoTokenizer, AutoProcessor
     from qwen_vl_utils import process_vision_info
 
     import soundfile as sf
-
-    from transformers import Qwen2_5OmniModel, Qwen2_5OmniProcessor
     from qwen_omni_utils import process_mm_info
 except Exception as e:
     eval_logger.debug(f"Upgrade transformers to use qwen2_5_omini. {e}")
@@ -82,7 +80,7 @@ class Qwen25omniVL(LMM):
             self._device = torch.device(f"cuda:{accelerator.local_process_index}")
             self.device_map = f"cuda:{accelerator.local_process_index}"
         
-        self._model = Qwen2_5OmniModel.from_pretrained(self.model_version, device_map=self.device_map, torch_dtype=self.dtype, attn_implementation=self.attn_implementation)
+        self._model = Qwen2_5OmniForConditionalGeneration.from_pretrained(self.model_version, device_map=self.device_map, torch_dtype=self.dtype, attn_implementation=self.attn_implementation)
         self._model.eval()
         
         self.processor = Qwen2_5OmniProcessor.from_pretrained(self.model_version)
