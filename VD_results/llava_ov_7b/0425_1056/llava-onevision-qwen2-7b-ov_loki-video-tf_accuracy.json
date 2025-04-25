@@ -1,0 +1,91 @@
+{
+    "total_accuracy": {
+        "accuracy": 0.5721851444007082,
+        "num": 1272,
+        "real_accuracy": 0.868303938090516,
+        "fake_accuracy": 0.27606635071090047,
+        "real_num": 428,
+        "fake_num": 844
+    },
+    "per_metric_accuracy": {
+        "CogVideoX": {
+            "accuracy": 0.6217948717948718,
+            "num": 88,
+            "real_accuracy": 0.9166666666666666,
+            "fake_accuracy": 0.3269230769230769,
+            "real_num": 36,
+            "fake_num": 52
+        },
+        "keling": {
+            "accuracy": 0.5378787878787878,
+            "num": 242,
+            "real_accuracy": 0.9393939393939394,
+            "fake_accuracy": 0.13636363636363635,
+            "real_num": 66,
+            "fake_num": 176
+        },
+        "Lumiere": {
+            "accuracy": 0.5735294117647058,
+            "num": 136,
+            "real_accuracy": 0.8823529411764706,
+            "fake_accuracy": 0.2647058823529412,
+            "real_num": 68,
+            "fake_num": 68
+        },
+        "Sora": {
+            "accuracy": 0.5678754813863929,
+            "num": 240,
+            "real_accuracy": 0.8552631578947368,
+            "fake_accuracy": 0.2804878048780488,
+            "real_num": 76,
+            "fake_num": 164
+        },
+        "open-sora": {
+            "accuracy": 0.5756603773584905,
+            "num": 156,
+            "real_accuracy": 0.84,
+            "fake_accuracy": 0.3113207547169811,
+            "real_num": 50,
+            "fake_num": 106
+        },
+        "Photorealistic Video Generation with Diffusion Models": {
+            "accuracy": 0.5895202358616993,
+            "num": 264,
+            "real_accuracy": 0.8658536585365854,
+            "fake_accuracy": 0.3131868131868132,
+            "real_num": 82,
+            "fake_num": 182
+        },
+        "runway": {
+            "accuracy": 0.5779166666666666,
+            "num": 146,
+            "real_accuracy": 0.76,
+            "fake_accuracy": 0.3958333333333333,
+            "real_num": 50,
+            "fake_num": 96
+        }
+    },
+    "model_config": {
+        "model_type": "llava-next",
+        "init_kwargs": {
+            "model_version": "/root/zgp2/fanzheming/LVLM/llava-onevision-qwen2-7b-ov",
+            "conv_template": "qwen_2",
+            "model_name": "llava_qwen",
+            "max_num_frames": 8
+        },
+        "generate_kwargs": {
+            "top_p": 1,
+            "top_k": "None",
+            "temperature": 0,
+            "max_new_tokens": 1024
+        }
+    },
+    "task_config": {
+        "task_type": "loki",
+        "init_kwargs": {
+            "dataset_path": "data_json/video/true_or_false.json",
+            "task_name": "loki-video-tf",
+            "task_modality": "video"
+        }
+    }
+}

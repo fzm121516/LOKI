@@ -119,11 +119,11 @@ class LLaVANeXT(LMM):
         
         try:
             # Try to load the model with the multimodal argument
-            self._tokenizer, self._model, self._image_processor, self._max_length = load_pretrained_model(self.model_version, None, self.model_name, device_map=self.device_map, load_4bit=True, **self.llava_model_args)
+            self._tokenizer, self._model, self._image_processor, self._max_length = load_pretrained_model(self.model_version, None, self.model_name, device_map=self.device_map, **self.llava_model_args)
         except TypeError:
             # for older versions of LLaVA that don't have multimodal argument
             self.llava_model_args.pop("multimodal", None)
-            self._tokenizer, self._model, self._image_processor, self._max_length = load_pretrained_model(self.model_version, None, self.model_name, device_map=self.device_map, load_4bit=True, **self.llava_model_args)
+            self._tokenizer, self._model, self._image_processor, self._max_length = load_pretrained_model(self.model_version, None, self.model_name, device_map=self.device_map, **self.llava_model_args)
         
         self._config = self._model.config
         self.model.eval()
