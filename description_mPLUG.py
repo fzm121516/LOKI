@@ -65,7 +65,7 @@ def generate_description(video_path):
 
 
 
-    video_frames = [encode_video(_) for _ in video_path]
+    video_frames = [encode_video(video_path) ]
     inputs = processor(messages, images=None, videos=video_frames)
 
     inputs.to(device)
@@ -79,7 +79,7 @@ def generate_description(video_path):
     g = model.generate(**inputs)
     print(g)
 
-    return g
+    return g[0]
 
 def process_videos(json_path):
     # 读取JSON文件
