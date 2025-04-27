@@ -1,6 +1,6 @@
 import json
 
-with open('true_or_false_with_description_longva.json', 'r', encoding='utf-8') as f:
+with open('true_or_false_with_description_mplug.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 for item in data:
@@ -23,7 +23,7 @@ for item in data:
         
         del item['description']
 
-with open('true_or_false_with_description_longva_test.json', 'w', encoding='utf-8') as f:
+with open('true_or_false_with_description_mplug_test.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
 print("处理完成")
