@@ -1,7 +1,7 @@
 model_type: minicpm-v2.6
 
 init_kwargs:
-  model_version: /root/zgp2/fanzheming/LVLM/MiniCPM-V-2_6
+  model_version: /root/zgp2/fanzheming/LVLM/MiniCPM-o-2_6
   max_num_frames: 8
 
 generate_kwargs:

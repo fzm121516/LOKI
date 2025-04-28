@@ -640,3 +640,15 @@ CUDA_VISIBLE_DEVICES=2 python3 run.py --model_config_path configs/models/qwen2_v
 
 
 CUDA_VISIBLE_DEVICES=2 python3 run.py --model_config_path configs/models/qwen2_vl_vitandmerger_config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+
+
+CUDA_VISIBLE_DEVICES=0 python3 run.py --model_config_path configs/models/internvl25_config.yaml --task_config_path configs/tasks/video/video_mc_loki.yaml --batch_size 1
+
+
+CUDA_VISIBLE_DEVICES=0 python3 run.py --model_config_path configs/models/internvl3_config.yaml --task_config_path configs/tasks/video/video_mc_loki.yaml --batch_size 1
+
+
+saa_qwen25.config.yaml
+
+CUDA_VISIBLE_DEVICES=1 python3 run.py --model_config_path configs/models/saa_qwen25.config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1

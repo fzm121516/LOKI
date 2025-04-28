@@ -3,6 +3,7 @@ from lm_evaluate.models.claude import Claude
 from lm_evaluate.models.openai_api import OpenAI
 from lm_evaluate.models.xcomposer2d5 import XComposer2D5
 from lm_evaluate.models.internvl2 import InternVL2
+from lm_evaluate.models.internvl3 import InternVL3
 from lm_evaluate.models.mplug_owl import MPlugOwl
 from lm_evaluate.models.vila import VILA
 from lm_evaluate.models.minicpm_2_6 import MiniCPM
