@@ -46,7 +46,7 @@ class Qwen25omniVL(LMM):
         model_version: str = "Qwen/Qwen2-VL-7B-Instruct",
         device: str = "cuda",
         device_map: str = "cuda",
-        dtype: Optional[Union[str, torch.dtype]] = "auto",
+        dtype: Optional[Union[str, torch.dtype]] = "bfloat16",
         attn_implementation: Optional[str] ='flash_attention_2',
         truncation: bool = True
     ):
@@ -365,8 +365,8 @@ class Qwen25omniVL(LMM):
             tokenize=False,
             add_generation_prompt=True
         )
-        
-        image_inputs, video_inputs = process_vision_info(messages)
+        audios, images, videos = process_mm_info(messages, use_audio_in_video=False)
+        # image_inputs, video_inputs = process_vision_info(messages)
         
         eval_logger.debug(f"Prompt: {prompt}")
         
@@ -377,31 +377,45 @@ class Qwen25omniVL(LMM):
         } 
         
         inputs = self.processor(
-            text=[prompt], 
-            images=image_inputs,
-            videos=video_inputs,
+            text=prompt, 
+            images=images,
+            videos=videos,
             padding=True,
             return_tensors="pt"
         )
         
         inputs = inputs.to(self.device)
-        
+
         generated_ids = self.model.generate(
             **inputs,
             **generation_args,
         )
-        generated_ids_trimmed = [
-            out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
-        ]
+        # generated_ids_trimmed = [
+        #     out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+        # ]
         
-        response = self.processor.batch_decode(
-            generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
-        )[0]
+        # response = self.processor.batch_decode(
+        #     generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+        # )[0]
 
-        
-        eval_logger.debug(response)
-        
-        return response
+
+        text_ids, audio = self.model.generate(**inputs, use_audio_in_video=False)
+
+        text = self.processor.batch_decode(text_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)
+        # print(text)
+
+        # 使用正则表达式提取 'assistant\n' 后的内容
+        extracted_text = []
+        for t in text:
+            match = re.search(r'(?<=assistant\n)(.*)', t)
+            if match:
+                extracted_text.append(match.group(1).strip())  # 提取的内容，并去掉前后的空格
+
+        print(extracted_text[0])  # 输出提取后的文本
+        return extracted_text[0]
+
+
+        return text
     
         
         

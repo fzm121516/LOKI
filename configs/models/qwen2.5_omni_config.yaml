@@ -1,7 +1,7 @@
 model_type: qwen2_5_omini
 
 init_kwargs:
-  model_version: /data/Qwen2.5-Omni-7B
+  model_version: /root/zgp2/fanzheming/LVLM/Qwen2.5-Omni-7B
 
 generate_kwargs:
   top_p: 1
