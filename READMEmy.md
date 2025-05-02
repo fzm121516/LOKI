@@ -676,3 +676,10 @@ CUDA_VISIBLE_DEVICES=1 python run.py --model_config_path configs/models/qwen2.5_
 
 CUDA_VISIBLE_DEVICES=1 python run.py --model_config_path configs/models/qwen2.5_omni_config.yaml --task_config_path configs/tasks/video/video_mc_loki.yaml --batch_size 1 
 
+saa2_qwen25.config.yaml
+
+
+CUDA_VISIBLE_DEVICES=0 python run.py --model_config_path configs/models/saa2_qwen25.config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1 
+
+
+CUDA_VISIBLE_DEVICES=1 python run.py --model_config_path configs/models/saa2_qwen25.config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1 

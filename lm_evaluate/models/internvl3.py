@@ -81,7 +81,7 @@ class InternVL3(LMM):
         self._model.eval()
         
         self.processor = AutoProcessor.from_pretrained(self.model_version)
-        self.processor.tokenizer.padding_side = "left"
+        # self.processor.tokenizer.padding_side = "left"
         
         self.accelerator = accelerator
         if accelerator.num_processes > 1:
