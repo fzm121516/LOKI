@@ -683,3 +683,6 @@ CUDA_VISIBLE_DEVICES=0 python run.py --model_config_path configs/models/saa2_qwe
 
 
 CUDA_VISIBLE_DEVICES=1 python run.py --model_config_path configs/models/saa2_qwen25.config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1 
+
+
+modelscope download --model Qwen/Qwen2.5-Omni-3B --local_dir ./Qwen2.5-Omni-3B

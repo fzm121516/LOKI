@@ -1,4 +1,4 @@
-model_type: internvl3
+model_type: internvl2
 
 init_kwargs:
   model_version: /root/zgp2/fanzheming/LVLM/InternVL3-8B-hf
