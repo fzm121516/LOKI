@@ -1,7 +1,7 @@
 
 
 
-CUDA_VISIBLE_DEVICES=0 python description_Qwen2.5-VL-7B-Instruct.py
+CUDA_VISIBLE_DEVICES=5 python description_Qwen2.5-VL-7B-Instruct.py
 
 
 
