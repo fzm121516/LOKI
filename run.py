@@ -32,12 +32,12 @@ from lm_evaluate.api.registry import MODEL_REGISTRY, TASK_REGISTRY
 import numpy as np
 import torch
 import random
-seed = 42
-torch.manual_seed(seed)
-np.random.seed(seed)
-random.seed(seed)
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
+# seed = 42
+# torch.manual_seed(seed)
+# np.random.seed(seed)
+# random.seed(seed)
+# torch.backends.cudnn.deterministic = True
+# torch.backends.cudnn.benchmark = False
 
 
 def main(args):
