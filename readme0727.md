@@ -4,7 +4,27 @@ CUDA_VISIBLE_DEVICES=5 python process_videos.py \
   --transform noise \
   --sigma 10 
 
+|                        Type                         |Num |     Accuracy     |
+|-----------------------------------------------------|---:|-----------------:|
+|total_accuracy                                       |1272|0.7113687360620177|
+|CogVideoX                                            |  88|0.7222222222222222|
+|keling                                               | 242|0.6856060606060606|
+|Lumiere                                              | 136|0.9191176470588236|
+|Sora                                                 | 240|0.5194159178433889|
+|open-sora                                            | 156|0.8105660377358490|
+|Photorealistic Video Generation with Diffusion Models| 264|0.7804878048780488|
+|runway                                               | 146|0.6929166666666666|
 
+|                        Type                         |Num|     Accuracy      |
+|-----------------------------------------------------|--:|------------------:|
+|total_accuracy                                       |428|0.76869158878504670|
+|CogVideoX                                            | 36|0.91666666666666660|
+|keling                                               | 66|0.71212121212121220|
+|Lumiere                                              | 68|0.94117647058823530|
+|Sora                                                 | 76|0.40789473684210525|
+|open-sora                                            | 50|0.88000000000000000|
+|Photorealistic Video Generation with Diffusion Models| 82|0.86585365853658540|
+|runway                                               | 50|0.78000000000000000|
 
 CUDA_VISIBLE_DEVICES=5 python process_videos.py \
   --input_dir ./media_data/video_ori \
@@ -16,14 +36,14 @@ CUDA_VISIBLE_DEVICES=5 python process_videos.py \
 
 |                        Type                         |Num |     Accuracy     |
 |-----------------------------------------------------|---:|-----------------:|
-|total_accuracy                                       |1272|0.7520941398114406|
-|CogVideoX                                            |  88|0.7500000000000000|
-|keling                                               | 242|0.7320075757575757|
-|Lumiere                                              | 136|0.9191176470588236|
-|Sora                                                 | 240|0.6251604621309370|
-|open-sora                                            | 156|0.8111320754716982|
+|total_accuracy                                       |1272|0.7466141087701723|
+|CogVideoX                                            |  88|0.6805555555555556|
+|keling                                               | 242|0.7310606060606060|
+|Lumiere                                              | 136|0.9411764705882353|
+|Sora                                                 | 240|0.5827984595635430|
+|open-sora                                            | 156|0.8352830188679246|
 |Photorealistic Video Generation with Diffusion Models| 264|0.8048780487804879|
-|runway                                               | 146|0.7233333333333334|
+|runway                                               | 146|0.7445833333333334|
 
 |                        Type                         |Num|     Accuracy      |
 |-----------------------------------------------------|--:|------------------:|
@@ -75,6 +95,28 @@ CUDA_VISIBLE_DEVICES=5 python process_videos.py \
   --transform compressed \
   --bitrate 300k 
 
+|                        Type                         |Num |     Accuracy     |
+|-----------------------------------------------------|---:|-----------------:|
+|total_accuracy                                       |1272|0.7195459639929400|
+|CogVideoX                                            |  88|0.6944444444444444|
+|keling                                               | 242|0.6808712121212122|
+|Lumiere                                              | 136|0.8529411764705883|
+|Sora                                                 | 240|0.5813543003851090|
+|open-sora                                            | 156|0.8205660377358490|
+|Photorealistic Video Generation with Diffusion Models| 264|0.7439024390243902|
+|runway                                               | 146|0.7879166666666667|
+
+
+|                        Type                         |Num|     Accuracy     |
+|-----------------------------------------------------|--:|-----------------:|
+|total_accuracy                                       |428|0.7546728971962616|
+|CogVideoX                                            | 36|0.8888888888888888|
+|keling                                               | 66|0.7121212121212122|
+|Lumiere                                              | 68|0.8676470588235294|
+|Sora                                                 | 76|0.4605263157894737|
+|open-sora                                            | 50|0.8400000000000000|
+|Photorealistic Video Generation with Diffusion Models| 82|0.8536585365853660|
+|runway                                               | 50|0.7600000000000000|
 
 CUDA_VISIBLE_DEVICES=5 python run.py --model_config_path configs/models/saa2_qwen2.config.yaml --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
 
