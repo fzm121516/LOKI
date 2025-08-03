@@ -19,6 +19,16 @@ def resize_distort(frame, scale):
     small = cv2.resize(frame, (int(w * scale), int(h * scale)))
     return cv2.resize(small, (w, h))
 
+def random_crop(frame, scale):
+    h, w = frame.shape[:2]
+    new_h, new_w = int(h / scale), int(w / scale)
+    if new_h > h or new_w > w:
+        raise ValueError("Scale is too small for cropping.")
+    top = np.random.randint(0, h - new_h + 1)
+    left = np.random.randint(0, w - new_w + 1)
+    cropped = frame[top:top + new_h, left:left + new_w]
+    return cropped
+
 def compress_video_ffmpeg(temp_input, output_path, bitrate):
     os.system(f'ffmpeg -y -i "{temp_input}" -b:v {bitrate} -loglevel error "{output_path}"')
     os.remove(temp_input)
@@ -57,6 +67,12 @@ def process_video(input_path, output_path, transform_type, args):
             out_frame = resize_distort(frame, scale=args.scale)
             writer.write(out_frame)
 
+        elif transform_type == 'crop':
+            out_frame = random_crop(frame, scale=args.crop_scale)
+            # 如果想保持原始尺寸，可以resize回去；否则输出裁剪后尺寸（可能导致视频尺寸不一致）
+            out_frame = cv2.resize(out_frame, (w, h))
+            writer.write(out_frame)
+
         elif transform_type == 'compressed':
             frames.append(frame)
 
@@ -88,7 +104,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--input_dir", type=str, required=True, help="Input directory of videos")
     parser.add_argument("--output_dir", type=str, required=True, help="Output directory for processed videos")
-    parser.add_argument("--transform", type=str, required=True, choices=["noise", "blur", "resize", "compressed"], help="Transformation type")
+    parser.add_argument("--transform", type=str, required=True, choices=["noise", "blur", "resize", "compressed", "crop"], help="Transformation type")
 
     # noise
     parser.add_argument("--sigma", type=float, default=15.0, help="Noise standard deviation (for 'noise')")
@@ -102,6 +118,9 @@ if __name__ == "__main__":
 
     # compressed
     parser.add_argument("--bitrate", type=str, default="500k", help="Target bitrate for compression")
+
+    # crop
+    parser.add_argument("--crop_scale", type=float, default=4.0, help="Crop scale (e.g. 4.0 means crop to 1/4 width and height)")
 
     args = parser.parse_args()
 
