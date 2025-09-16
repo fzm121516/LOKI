@@ -4,9 +4,7 @@ CUDA_VISIBLE_DEVICES=6 python run.py --model_config_path configs/models/qwen2.5_
 
 CUDA_VISIBLE_DEVICES=5 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml  --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1
 
-
 CUDA_VISIBLE_DEVICES=0 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml  --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
-
 
 025-04-13 18:46:47.346 | INFO     | lm_evaluate.tasks.loki:aggregate_results:609 - Type: CogVideoX                                                                                                          | 0/1272 [00:00<?, ?it/s]
 2025-04-13 18:46:47.346 | INFO     | lm_evaluate.tasks.loki:aggregate_results:627 - Real Num: 36
