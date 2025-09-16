@@ -1,4 +1,8 @@
-CUDA_VISIBLE_DEVICES=5
+transformers 4.42 4.55.2
+
+CUDA_VISIBLE_DEVICES=6 python run.py --model_config_path configs/models/qwen2.5_vl_aigi_config.yaml  --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1
+
+CUDA_VISIBLE_DEVICES=5 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml  --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1
 
 
 CUDA_VISIBLE_DEVICES=0 python run.py --model_config_path configs/models/qwen2.5_vl_config.yaml  --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
