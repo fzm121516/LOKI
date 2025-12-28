@@ -1,4 +1,10 @@
 
+CUDA_VISIBLE_DEVICES=6 python run.py --model_config_path configs/models/qwen2.5_vl_final_config.yaml  --task_config_path configs/tasks/video/video_tf_loki.yaml --batch_size 1
+
+
+
+
+
 
 
 CUDA_VISIBLE_DEVICES=6 python run.py --model_config_path configs/models/qwen2.5_vl_aigi_config.yaml  --task_config_path configs/tasks/image/image_tf_loki.yaml --batch_size 1

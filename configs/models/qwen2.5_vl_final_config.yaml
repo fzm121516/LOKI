@@ -1,0 +1,10 @@
+model_type: qwen2-vl
+
+init_kwargs:
+  model_version: /home/ubuntu/zhemingfan/mllm/trainDVFmc1_2e04_2025-04-23-21-37-79llmmerger42
+
+generate_kwargs:
+  top_p: 1
+  top_k: None
+  temperature: 0
+  max_new_tokens: 16
